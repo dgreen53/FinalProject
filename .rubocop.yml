@@ -1,1 +1,16 @@
 inherit_from: .rubocop_todo.yml
+
+#disabling these checks that are just style guides
+#many of these also conflict with the default rails generated
+#files
+Style/StringLiterals:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false

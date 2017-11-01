@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Province.create(name: 'Manitoba', pst: 8, gst: 5, hst: 0 , short: 'MB')
+Province.create(name: 'Manitoba', pst: 8, gst: 5, hst: 0, short: 'MB')
