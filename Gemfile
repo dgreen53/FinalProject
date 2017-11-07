@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rubocop', '0.51.0'
 
 gem 'devise', '4.3.0'
+gem 'slim', '3.0.8'

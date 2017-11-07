@@ -1,16 +1,31 @@
 inherit_from: .rubocop_todo.yml
 
+AllCops:
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - bin/**/*
+    - test/**/*
+    - app/admin/**/*
+
+Encoding:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 99
+
 #disabling these checks that are just style guides
 #many of these also conflict with the default rails generated
 #files
-Style/StringLiterals:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/NumericLiterals:
-  Enabled: false
-
-Layout/EmptyLinesAroundBlockBody:
-  Enabled: false
+# Style/StringLiterals:
+#   Enabled: false
+#
+# Style/NumericLiterals:
+#   Enabled: false
+#
+# Layout/EmptyLinesAroundBlockBody:
+#   Enabled: false
