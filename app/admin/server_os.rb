@@ -38,7 +38,7 @@ ActiveAdmin.register ServerOs do
   end
 
   index as: :grid do |os|
-    a href: admin_server_os_url(os) do
+    a href: admin_server_o_path(os) do
       img src: image_path(os.image), alt: os.name
       div os.name
     end
