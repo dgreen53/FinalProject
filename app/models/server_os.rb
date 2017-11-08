@@ -1,0 +1,2 @@
+class ServerOs < ApplicationRecord
+end
