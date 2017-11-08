@@ -1,4 +1,4 @@
-ActiveAdmin.register ServerRam do
+ActiveAdmin.register ServerCpu do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,5 +11,5 @@ ActiveAdmin.register ServerRam do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :size, :bill_rate
+  permit_params :core_count, :bill_rate
 end

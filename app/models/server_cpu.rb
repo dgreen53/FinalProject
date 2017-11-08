@@ -1,0 +1,2 @@
+class ServerCpu < ApplicationRecord
+end
