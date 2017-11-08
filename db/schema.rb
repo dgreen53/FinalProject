@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108142523) do
+ActiveRecord::Schema.define(version: 20171108143925) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -96,6 +96,19 @@ ActiveRecord::Schema.define(version: 20171108142523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "bill_rate"
+  end
+
+  create_table "server_specs", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "server_cpu_id"
+    t.integer "server_ram_id"
+    t.decimal "bill_rate"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["server_cpu_id"], name: "index_server_specs_on_server_cpu_id"
+    t.index ["server_ram_id"], name: "index_server_specs_on_server_ram_id"
   end
 
 end
