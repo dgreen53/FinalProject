@@ -11,5 +11,36 @@ ActiveAdmin.register ServerOs do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :name, :description
+  permit_params :name, :description, :image
+
+  show do
+    attributes_table do
+      row :image do |os|
+        image_tag os.image.thumb
+      end
+      row :name
+      row :description
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+
+  index do
+    selectable_column
+    id_column
+    column :name
+    column :description
+    column :image do |os|
+      image_tag os.image.thumb
+    end
+    actions
+  end
+
+  index as: :grid do |os|
+    a href: admin_server_os_url(os) do
+      img src: image_path(os.image), alt: os.name
+      div os.name
+    end
+  end
 end

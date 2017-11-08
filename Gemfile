@@ -58,3 +58,5 @@ gem 'rubocop', '0.51.0'
 
 gem 'devise', '4.3.0'
 gem 'slim', '3.0.8'
+gem 'carrierwave', '1.2.1'
+gem 'mini_magick', '4.8.0'
