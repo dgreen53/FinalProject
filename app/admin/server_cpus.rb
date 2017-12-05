@@ -11,5 +11,5 @@ ActiveAdmin.register ServerCpu do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :core_count, :bill_rate
+  permit_params :cores, :bill_rate
 end
