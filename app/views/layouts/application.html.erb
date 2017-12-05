@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% page_title = @page.present? ? @page.title : "GreenSpace" %>
+    <% page_title = @page.present? ? @page.title + " - GreenSpace" : "GreenSpace" %>
     <title><%= page_title %></title>
     <%= csrf_meta_tags %>
 
