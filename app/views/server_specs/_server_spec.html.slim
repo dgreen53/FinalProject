@@ -1,0 +1,15 @@
+.server
+  = image_tag(server_spec.image)
+  h2 = server_spec.name
+  p
+    b Description:
+    = server_spec.description
+  p
+    b CPU:
+    = server_spec.server_cpu.name
+  p
+    b Ram:
+    = server_spec.server_ram.name
+  p
+    b Monthly:
+    = number_to_currency server_spec.bill_rate
