@@ -1,15 +1,23 @@
-.server
-  = image_tag(server_spec.image)
-  h2 = server_spec.name
-  p
-    b Description:
-    = server_spec.description
-  p
-    b CPU:
-    = server_spec.server_cpu.name
-  p
-    b Ram:
-    = server_spec.server_ram.name
-  p
-    b Monthly:
-    = number_to_currency server_spec.bill_rate
+.col-sm-6.col-md-4.col-lg-3
+  .card.bg-secondary.text-light.border-primary.server
+    = image_tag(server_spec.image, class: 'card-img')
+    .card-img-overlay
+      h4.card-title
+        = server_spec.name
+      .card-block
+        p.card-text
+          b Description:
+          = server_spec.description
+      .card-block
+        p.card-text
+          b CPU:
+          = server_spec.server_cpu.name
+      .card-block
+        p.card-text
+          b Ram:
+          = server_spec.server_ram.name
+      .card-block
+        p.card-text
+          b Monthly:
+          = number_to_currency server_spec.bill_rate
+        a.btn.btn-primary href="#" Order
