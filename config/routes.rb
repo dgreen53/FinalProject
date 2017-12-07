@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   #get 'products/index'
 
-  #root to: 'home#index'
-  root to: 'products#index'
+  root to: 'home#index'
+
+  get 'products', to: 'products#index', as: 'products'
+  #root to: 'products#index'
 
   get 'about', to: 'home#about', as: 'about'
   get 'contact', to: 'home#contact', as: 'contact'
