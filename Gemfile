@@ -63,3 +63,5 @@ gem 'mini_magick', '4.8.0'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 
 gem 'jquery-rails', '4.3.1'
+
+gem 'slim-rails', '3.1.3'
