@@ -1,5 +1,9 @@
-h1 Products Index
-.card-group-wrapper
-  .card-group
-    .row.no-gutters
-      == render @servers
+.container
+  h1 Products Index
+  .card-group-wrapper
+    .card-group
+      .row.no-gutters
+        == render @servers
+  .row
+    .digg_pagination
+      == will_paginate @servers, :container=>false
