@@ -5,6 +5,9 @@ RUN apt-get update \
         postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
+RUN apt-get install nodejs
+
 WORKDIR /usr/src/app
 COPY Gemfile* ./
 RUN bundle install
