@@ -1,5 +1,9 @@
 .container
-  h1 Products Index
+  h1 Here are our servers!
+  p.lead New configs coming all the time!
+  = form_tag(products_path, method: :get) do
+    = text_field_tag :term
+    = submit_tag 'Search'
   .card-group-wrapper
     .card-group
       .row.no-gutters
