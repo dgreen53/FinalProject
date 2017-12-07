@@ -1,2 +1,4 @@
-h1 = @page.title
-p = @page.block_text
+.container
+  .start-template
+    h1 = @page.title
+    p.lead = @page.block_text.html_safe
